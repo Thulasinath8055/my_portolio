@@ -256,33 +256,99 @@ section{
     font-weight: 500;
 }
 
-.input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    margin-top: 5rem;
+/* Contact Section Styling */
+.contact-section {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.input-box input{
-    border-radius: 3rem;
-    border: 2px solid black;
-    padding: 2rem 8rem;
-    font-size: 3rem;
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-.input-box input::placeholder{
-    font-size: 3rem;
+
+.contact-container p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 30px;
 }
-.input{
-    position: relative;
+
+/* Form Groups */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.input i{
-    position: absolute;
-    font-size: 3rem;
-    top: 50%;
-    left: 10px;
-    transform: translate(50%, -50%);
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #1f2937;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 24px;
+  }
 }
 
 footer{
@@ -322,16 +388,6 @@ footer ul li a{
     .experience-info{
         flex-direction: column;
     }
-    .input-box input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
-    }
-    .input input::placeholder{
-        font-size: 2.5rem;
-    }
-    .input-box i{
-        font-size: 2.5rem;
-    }
 }
 
 @media(max-width:768px){
@@ -347,16 +403,6 @@ footer ul li a{
     }
     .about-container{
         flex-direction: column;
-    }
-    .input-box input{
-       padding: 1rem 2rem;
-       font-size: 1.8rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
-    .input-box i{
-        display: none;
     }
     .grid{
         grid-template-columns: repeat(1,1fr);
@@ -401,14 +447,6 @@ footer ul li a{
 
     .about-container img{
         width: 80vw;
-    }
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
     }
     footer ul{
         gap: 1rem;
